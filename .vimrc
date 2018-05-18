@@ -1,0 +1,2 @@
+colo torte
+syntax on

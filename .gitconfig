@@ -1,0 +1,22 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Damian Ryan
+	email = github@damianryan.com
+[alias]
+	st = status
+	status = status
+	ci = commit
+	co = checkout
+	com = checkout master
+	pom = pull origin master
+	po = push origin
+	pa = pull --all
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	chmod = update-index --chmod
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[push]
+	default = matching
+[core]
+	autocrlf = input

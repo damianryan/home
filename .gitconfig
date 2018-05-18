@@ -5,7 +5,7 @@
 	email = github@damianryan.com
 [alias]
 	st = status
-	status = status
+	stat = status
 	ci = commit
 	co = checkout
 	com = checkout master

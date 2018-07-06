@@ -18,6 +18,8 @@ alias grep='grep --colour=always'
 alias less='cless'
 alias refresh='source ~/.bashrc'
 
+export HOSTNAME=$(hostname)
+
 # Source the .git-completion.bash file if it exists
 if [ -e "${HOME}/.git-completion.bash" ]; then
   source "${HOME}/.git-completion.bash"

@@ -30,8 +30,9 @@ if [ -e "${HOME}/.git-completion.bash" ]; then
   PS1="\[\033[0;32m\]\u\[\033[35m\]@\h:\[\033[33m\]\w\[\033[1;33m\]\$(__git_ps1 '(%s)')\[\033[0m\]\n$ "
 fi
 
-export JAVA_HOME=`/usr/libexec/java_home`
-M2_PREFIX=`brew --prefix maven`
+export JAVA_HOME=$(/usr/libexec/java_home)
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+M2_PREFIX=$(brew --prefix maven)
 export M2_HOME=$M2_PREFIX/libexec
 export M2=$M2_HOME/bin
 

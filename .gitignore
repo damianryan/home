@@ -20,6 +20,7 @@
 .lesshst
 .lobo/
 .m2/
+.minikube/
 .oracle_jre_usage/
 .scala_history
 .ssh/

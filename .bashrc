@@ -27,15 +27,7 @@ alias ga='git add .'
 
 export HOSTNAME=$(hostname)
 
-# Source the .git-completion.bash file if it exists
-if [ -e "${HOME}/.git-completion.bash" ]; then
-  source "${HOME}/.git-completion.bash"
-  GIT_PS1_SHOWDIRTYSTATE=TRUE
-  GIT_PS1_SHOWSTASHSTATE=TRUE
-  GIT_PS1_SHOWUNTRACKEDSILES=TRUE
-  GIT_PS1_SHOWUPSTREAM="auto"
-  PS1="\[\033[0;32m\]\u\[\033[35m\]@\h:\[\033[33m\]\w\[\033[1;33m\]\$(__git_ps1 '(%s)')\[\033[0m\]\n$ "
-fi
+PS1="\[\033[0;32m\]\u\[\033[35m\]@\h:\[\033[33m\]\w\[\033[1;33m\]\$(__git_ps1 '(%s)')\[\033[0m\]\n$ "
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec

@@ -1,3 +1,4 @@
+#!/bin/bash
 shopt -s histappend
 shopt -s cmdhist
 PROMPT_COMMAND='history -a'
@@ -17,6 +18,12 @@ alias ls='ls -hG'
 alias grep='grep --colour=always'
 alias less='cless'
 alias refresh='source ~/.bashrc'
+alias gr='gradle'
+alias gc='gr clean'
+alias gcb='gc build'
+alias gb='gr build'
+alias gs='git st'
+alias ga='git add .'
 
 export HOSTNAME=$(hostname)
 
@@ -41,9 +48,4 @@ eval "$(thefuck --alias)"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
-
-export CLASSPATH=".:/usr/local/lib/antlr-4.6-complete.jar:$CLASSPATH"
-
-alias antlr4='java -jar /usr/local/lib/antlr-4.6-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
 

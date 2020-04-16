@@ -16,6 +16,7 @@
 .groovy/
 .jmc/
 .kobalt/
+.kube/
 .lein/
 .lesshst
 .lobo/

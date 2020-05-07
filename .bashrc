@@ -35,6 +35,7 @@ export M2=$M2_HOME/bin
 
 eval "$(thefuck --alias)"
 
+# make sure bash_completion is installed - brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi

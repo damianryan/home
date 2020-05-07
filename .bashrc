@@ -27,8 +27,6 @@ alias ga='git add .'
 
 export HOSTNAME=$(hostname)
 
-PS1="\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\d \t \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$"
-
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 M2_PREFIX=$(brew --prefix maven)
@@ -41,3 +39,4 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+PS1="\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\d \t \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$"

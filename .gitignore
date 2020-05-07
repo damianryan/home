@@ -27,6 +27,7 @@
 .teamcity/
 .vim/
 .viminfo
+.vmware
 .wget-hsts
 Applications/
 Desktop/

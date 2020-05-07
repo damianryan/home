@@ -27,7 +27,7 @@ if [ -e "${HOME}/.git-completion.bash" ]; then
   GIT_PS1_SHOWSTASHSTATE=TRUE
   GIT_PS1_SHOWUNTRACKEDSILES=TRUE
   GIT_PS1_SHOWUPSTREAM="auto"
-  PS1="\[\033[0;32m\]\u\[\033[35m\]@\h:\[\033[33m\]\w\[\033[1;33m\]\$(__git_ps1 '(%s)')\[\033[0m\]\n$ "
+  PS1="\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\d \t \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$"
 fi
 
 export JAVA_HOME=$(/usr/libexec/java_home)

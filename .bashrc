@@ -1,3 +1,4 @@
+#!/bin/bash
 shopt -s histappend
 shopt -s cmdhist
 PROMPT_COMMAND='history -a'
@@ -17,18 +18,16 @@ alias ls='ls -hG'
 alias grep='grep --colour=always'
 alias less='cless'
 alias refresh='source ~/.bashrc'
+alias gr='gradle'
+alias gc='gr clean'
+alias gcb='gc build'
+alias gb='gr build'
+alias gs='git st'
+alias ga='git add .'
 
 export HOSTNAME=$(hostname)
 
-# Source the .git-completion.bash file if it exists
-if [ -e "${HOME}/.git-completion.bash" ]; then
-  source "${HOME}/.git-completion.bash"
-  GIT_PS1_SHOWDIRTYSTATE=TRUE
-  GIT_PS1_SHOWSTASHSTATE=TRUE
-  GIT_PS1_SHOWUNTRACKEDSILES=TRUE
-  GIT_PS1_SHOWUPSTREAM="auto"
-  PS1="\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\d \t \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$"
-fi
+PS1="\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\d \t \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
@@ -41,9 +40,4 @@ eval "$(thefuck --alias)"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
-
-export CLASSPATH=".:/usr/local/lib/antlr-4.6-complete.jar:$CLASSPATH"
-
-alias antlr4='java -jar /usr/local/lib/antlr-4.6-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
 

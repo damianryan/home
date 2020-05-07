@@ -9,9 +9,10 @@
 	ci = commit
 	co = checkout
 	com = checkout master
-	pom = pull origin master
-	po = push origin
-	pa = pull --all
+	plom = pull origin master
+	pso = push origin
+	psom = push origin master
+	pla = pull --all
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	chmod = update-index --chmod
 	unstage = reset HEAD --

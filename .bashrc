@@ -14,11 +14,24 @@ shopt -s cdable_vars
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/Library/Python/3.6/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+search_up() {
+  local look=${PWD%/}
+  while [[ -n ${look} ]]
+  do
+    [[ -e ${look}/${1} ]] && {
+      printf '%s\n' "${look}"
+      return
+    }
+    look=${look%/*}
+  done
+  [[ -e /${1} ]] && echo /
+}
+
 alias ls='ls -hG'
 alias grep='grep --colour=always'
 alias less='cless'
 alias refresh='source ~/.bashrc'
-alias gr='gradle'
+alias gr='$(search_up gradlew)/gradlew'
 alias gc='gr clean'
 alias gcb='gc build'
 alias gb='gr build'

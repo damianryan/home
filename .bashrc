@@ -37,6 +37,8 @@ alias gcb='gc build'
 alias gb='gr build'
 alias gs='git st'
 alias ga='git add .'
+alias gd='git diff'
+alias gds='git diff --staged'
 
 export HOSTNAME=$(hostname)
 
@@ -48,9 +50,9 @@ export M2=$M2_HOME/bin
 
 eval "$(thefuck --alias)"
 
-# make sure bash_completion is installed - brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-PS1="\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\d \t \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$"
+# needs bash-completion to have been installed (brew install bash-completion)
+PS1="\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\d \t \[\033[33m\]\w\[\033[36m\]$(__git_ps1)\[\033[0m\]\n$"

@@ -12,10 +12,12 @@
 .docker/
 .dropbox/
 .eclipse/
+.embedmongo/
 .gradle/
 .groovy/
 .jmc/
 .kobalt/
+.kotlinc_history
 .kube/
 .lein/
 .lesshst
@@ -45,3 +47,7 @@ Public/
 VirtualBox\ VMs/
 bin/
 *.txt
+.ivy2/
+.redhat/
+.tekton/
+.vscode/

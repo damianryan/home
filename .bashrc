@@ -11,7 +11,7 @@ HISTTIMEFORMAT='%F %T '
 shopt -s cdspell
 shopt -s cdable_vars
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/Library/Python/3.6/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 search_up() {
@@ -39,6 +39,7 @@ alias gs='git st'
 alias ga='git add .'
 alias gd='git diff'
 alias gds='git diff --staged'
+alias gags='ga && gs'
 
 export HOSTNAME=$(hostname)
 
